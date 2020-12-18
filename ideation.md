@@ -9,7 +9,7 @@
     * Home
     * Work
     * Resume
-* PAGE TITLE
+* PAGE TITLE (h1)
   * Hi! I'm Grace.
 * TEXT
   * I'm a student at Brown University studying CS and Economics.
@@ -26,7 +26,7 @@
     * Home
     * Work
     * Resume
-* PAGE TITLE
+* PAGE TITLE (h1)
   * Work.
 * TEXT
   * Before I discovered CS, I was mostly drawn to advocacy and
@@ -54,14 +54,14 @@
     * Home
     * Work
     * Resume
-* PAGE TITLE
+* PAGE TITLE (h1)
   * Project Name.
 * DETAILS
   * Tech
   * Date
   * Links
-* SECTION TITLE
-* SUBSECTION TITLE
+* SECTION TITLE (h2)
+* SUBSECTION TITLE (h3)
 * TEXT
 
 
