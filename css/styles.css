@@ -1,3 +1,4 @@
+/* default configurations */
 * {
   margin: 0px;
   padding: 0px;
@@ -33,15 +34,6 @@ header {
   letter-spacing: 0.5px;
 }
 
-.content {
-  margin: auto;
-  width: 50%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 h1 {
   font-size: 64px;
   margin-bottom: 15px;
@@ -50,6 +42,7 @@ h1 {
 p {
   font-size: 20px;
   line-height: 1.5em;
+  margin-bottom:15px;
 }
 
 p a {
@@ -57,10 +50,81 @@ p a {
   text-decoration: none;
 }
 
-.contact {
-  padding: 10px 0px 10px 0px;
+strong {
+  font-weight: 700;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 20px 20px 20px 20px;
 }
 
 .contact-icon {
   padding: 10px 50px 10px 0px;
+}
+
+.contact-icon:last-of-type {
+  padding: 10px 0px 10px 0px;
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+}
+
+.content-list {
+  font-size: 20px;
+  line-height: 1.5em;
+  margin: auto;
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+/* pages */
+
+.intro {
+  margin: auto;
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 15px;
+}
+
+.project {
+  border: 3px solid black;
+  border-radius: 20px;
+  position: relative;
+  width: 45%;
+  font-weight: 700;
+  font-size: 36px;
+  color: #7DB1ED;
+  margin: 20px 0px 20px 0px;
+}
+
+.project:after {
+  content: "";
+  display: block;
+  padding-bottom: 90%;
+}
+
+.project-title {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
