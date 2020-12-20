@@ -74,6 +74,12 @@ a {
   width: 50%;
 }
 
+.blank-content {
+  margin: auto;
+  width: 50%;
+  height: 100vh;
+}
+
 .content-list {
   font-size: 18px;
   line-height: 1.5em;
