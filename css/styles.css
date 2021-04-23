@@ -1,12 +1,47 @@
-/* default configurations */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/raleway/v19/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/karla/v15/qkBbXvYC6trAT7RVLtw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../AvenirFont/AvenirLTStd-Book.otf");
+}
+
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
+@keyframes init-fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes up-down {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(8px) }
+  100% { transform: translateY(0) }
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Avenir', sans-serif;
 }
 
 header {
@@ -26,14 +61,23 @@ footer {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 60px;
   margin-bottom: 15px;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+}
+
+h2 {
+  font-size: 45px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.5em;
-  margin-bottom:15px;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin-bottom: 20px;
 }
 
 strong {
@@ -54,24 +98,56 @@ a {
 .nav-link, .nav-link a:visited {
   text-decoration: none;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: black;
-  border-bottom: 1.5px solid black;
   margin-left: 50px;
   letter-spacing: 0.5px;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid black;
+}
+
+
+.underline {
+  display: inline-block;
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #7DB1ED;
+  transform-origin: bottom right;
+  transition: transform 0.8s cubic-bezier(0, 0, 0.07, 1);
+  margin-bottom: -2px;
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .contact-icon {
-  padding: 10px 50px 10px 0px;
+  padding: 10px 35px 10px 0px;
 }
 
 .contact-icon:last-of-type {
   padding: 10px 0px 10px 0px;
 }
 
+.contact-icon img {
+  width: 35px;
+}
+
 .content {
   margin: auto;
-  width: 50%;
+  width: 65%;
+  animation: init-fade 1.0s linear;
+  padding-top: 100vh;
 }
 
 .blank-content {
@@ -93,30 +169,61 @@ a {
 .intro {
   margin: auto;
   width: 50%;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.home {
+  animation: init-fade 1.0s linear;
+}
+
+.prompt {
+  animation: up-down 0.8s infinite;
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  transition: transform 250ms, opacity 400ms;
+}
+
+.prompt:hover {
+  transform: translateY(-1px);
+  opacity: 0;
+}
+
+.content > h1 {
+  padding-top: 40px;
 }
 
 .projects-container {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-bottom: 15px;
-  width: 90%;
+  width: 100%;
 }
 
 .project {
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 20px;
   position: relative;
   width: 45%;
-  font-weight: 700;
   font-size: 24px;
   color: #7DB1ED;
   margin: 20px 0px 20px 0px;
+  overflow: hidden;
+  transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+  transform: translateY(0px);
+  cursor: pointer;
+}
+
+.project:hover {
+  box-shadow: 0 2px 40px 0 #f0f0f0;
+  transform: translateY(-.6em);
 }
 
 .project:after {
@@ -124,6 +231,28 @@ a {
   display: block;
   padding-bottom: 90%;
 }
+
+/* .project:last-of-type {
+  border: none;
+}
+
+.project:last-of-type:hover {
+  box-shadow: none;
+  transform: none;
+  cursor: auto;
+} */
+
+/* .resume {
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 3px;
+  animation: up-down 0.8s infinite;
+  transition: transform 250ms, opacity 400ms;
+}
+
+.resume:hover {
+  transform: translateY(4px);
+} */
 
 .project-name {
   position: absolute;
@@ -136,12 +265,36 @@ a {
 }
 
 .project a {
-  font-weight: 700;
+  font-weight: 600;
+  font-family: 'Avenir';
 }
 
 .footnote {
   margin-top: 5px;
   font-size: 14px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;  /* for vertical scrollbars */
+    height: 0px; /* for horizontal scrollbars */
+}
+
+body::-webkit-scrollbar-track {
+    background: #e5e5e5;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+body::-webkit-scrollbar-corner  {
+    background: #d7e9fc;
 }
 
 /* Small devices (phones, 500px and up) */

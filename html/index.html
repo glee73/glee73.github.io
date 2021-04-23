@@ -10,24 +10,24 @@
     <title>Grace Lee</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href=
-    "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet">
   </head>
 
-  <body>
+  <body class="home">
 
     <header>
       <!--logo-->
-      <a href="../index.html"> <img class="logo" src="img/logo.svg"
-        alt="square with rounded black edges and a blue lowercase g"> </a>
+      <!-- <a href="../html/index.html"> <img class="logo float-on-hover" src="img/logo.svg"
+        alt="square with rounded black edges and a blue lowercase g"> </a> -->
        <!--navbar-->
+       <div class="">
+
+       </div>
+
        <nav>
          <ul class="nav-bar">
-           <li><a class="nav-link" href="./index.html">Home</a></li>
-           <li><a class="nav-link" href="./work.html">Work</a></li>
-           <li><a class="nav-link" href="#">Resume</a></li>
+           <li><a class="nav-link underline" href="./index.html">Home</a></li>
+           <li><a class="nav-link underline" href="#work">Work</a></li>
+           <li><a class="nav-link underline" href="#">About</a></li>
          </ul>
        </nav>
     </header>
@@ -36,10 +36,106 @@
     <div class="intro">
       <h1>Hi! I'm Grace.</h1>
       <p>I’m a student at <a href="http://brown.edu"> Brown University</a>
-        studying CS & economics. <br>
-        Currently, I’m a front-end developer intern at
-        <a href="http://myinfluency.com/"> My Influency</a>.</p>
+        studying CS and economics. <br>
+        This summer, I'll be working at
+        <a href="http://fidelityinvestments.com/"> Fidelity Investments</a> as a
+        SWE intern.</p>
 
+      <div class="contact">
+        <a class="contact-icon" href="http://github.com/glee73">
+          <img class="float-on-hover" src="https://img.icons8.com/ios-glyphs/50/000000/github.svg" alt="github icon"/></a>
+        <a class="contact-icon" href="mailto: grace_lee1@brown.edu">
+            <img class="float-on-hover" src="img/email.svg" alt="email icon"></a>
+        <a class="contact-icon" href="http://linkedin.com/in/grace-i-lee">
+            <img class="float-on-hover" src="https://img.icons8.com/ios-glyphs/50/000000/linkedin-2.svg" alt="person icon"></a>
+      </div>
+
+    </div>
+
+    <div>
+      <a href="#work">
+        <img class="prompt" src="./img/arrow-down-sign-to-navigate.svg" alt="">
+      </a>
+    </div>
+
+
+
+    <!--page content-->
+    <div class="content">
+      <a name="work"></a>
+      <h2>Projects</h2>
+<!--
+      <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+      <p> Here are some things I’ve made so far: </p> -->
+
+
+      <div class="projects-container">
+
+        <div class="projects-container">
+          <div class="project">
+            <div class="project-name">
+              <a href="./projects/google-maps-clone.html">Fuud</a>
+            </div>
+          </div>
+
+        <div class="project">
+          <div class="project-name">
+            <a href="./projects/google-maps-clone.html">Google Maps Clone</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-name">
+            <a href="./projects/tfc.html">Tunes for Change</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-name">
+            <a href="./projects/clean-water.html">Clean Water PVD</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-name">
+            <a href="./projects/ppe-scraper.html">PPE Scraper</a>
+          </div>
+        </div>
+
+        <!-- <div class="project">
+          <div class="project-name">
+            <a class="resume underline" href="./projects/ppe-scraper.html">See resume</a>
+          </div>
+        </div> -->
+
+    </div>
+
+  </div>
+
+  <div class="">
+    <h2>Ventures</h2>
+      <div class="projects-container">
+        <div class="project">
+          <div class="project-name">
+            <a href="./projects/google-maps-clone.html">Seer</a>
+          </div>
+        </div>
+      </div>
+</div>
+
+  <div class="">
+    <h2>Research</h2>
+    <div class="projects-container">
+      <div class="project">
+        <div class="project-name">
+          <a href="./projects/google-maps-clone.html">Seer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer>
       <div class="contact">
         <a class="contact-icon" href="http://github.com/glee73">
           <img src="img/github-icon.svg" alt="github icon"></a>
@@ -48,8 +144,13 @@
         <a class="contact-icon" href="http://linkedin.com/in/grace-i-lee">
             <img src="img/person-icon.svg" alt="person icon"></a>
       </div>
+      <div class="footnote">
+        made with love by grace
+      </div>
+    </footer>
 
-    </div>
+
+    <script src="../js/App.js"> </script>
 
   </body>
 </html>
