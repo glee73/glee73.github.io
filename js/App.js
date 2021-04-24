@@ -19,11 +19,11 @@ window.onload = () => {
             }, 85);
 
             let still = document.getElementsByClassName('float-on-hover');
+            console.log(still);
 
             for (let i = 0; i < still.length; i++) {
 
               still[i].addEventListener('mouseover', () => {
-
                 still[i].animate(
                   // keyframe
                   [
