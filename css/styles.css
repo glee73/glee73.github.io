@@ -182,7 +182,7 @@ a {
   padding: 1px 5px;
   font-weight: 400;
   font-size: 20px;
-  margin: 10px 5px 10px 20px;
+  margin: 10px 20px 10px 0px;
   text-transform: none;
 }
 
@@ -275,6 +275,7 @@ a {
   align-items: flex-end;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding-left: 25px;
 }
 
 .project:hover {
