@@ -266,10 +266,6 @@ a {
   align-items: flex-end;
 }
 
-.private {
-  background: #f5f5f5;
-}
-
 .tag-container {
   display: flex;
   align-items: flex-end;
@@ -283,6 +279,15 @@ a {
   -webkit-box-shadow: 0px 2px 7px 1px rgba(232, 233, 235, 0.23);
   -moz-box-shadow: 0px 2px 7px 1px rgba(232, 233, 235, 0.23);
   box-shadow: 0 3px 60px 0 #e8e9eb;
+}
+
+.private {
+  background: #f5f5f5;
+}
+
+.private:hover {
+  transform: none;
+  box-shadow: 1px 1px 10px #e3e4e6;
 }
 
 .project:after {
@@ -356,6 +361,19 @@ a {
 #resume {
   font-weight: 500;
   color: #415cba;
+}
+
+#me {
+  width: 250px;
+  border-radius: 100px;
+}
+
+.wrap {
+  display: flex;
+}
+
+.wrap-text {
+  margin-right: 50px;
 }
 
 .footnote {
