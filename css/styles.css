@@ -208,6 +208,10 @@ a {
   line-height: 1.8em;
 }
 
+#current-company {
+  text-transform: none;
+}
+
 .home {
   animation: init-fade 1.0s linear;
 }
